@@ -8,16 +8,16 @@ using System.Collections.Generic;
 
 namespace _04._03
 {
-    class Student
+    class Student_24
     {
+        //данные о студентах
         private string lastName { get; set; }
         private string firstName { get; set; }
         private string patrName { get; set; }
         private string group { get; set; }
-        private double mark { get; set; }
 
-        public Student() { }
-        public Student(string lastName_p, string firstName_p, string patrName_p, string group_p, double mark_p)
+        public Student_24() { }
+        public Student_24(string lastName_p, string firstName_p, string patrName_p, string group_p, double mark_p)
         {
             lastName = lastName_p;
             firstName = firstName_p;
@@ -30,7 +30,7 @@ namespace _04._03
             Console.WriteLine(lastName + " " + firstName + " " + patrName + " " + group + " " + mark);
         }
         public string getLastName() { return lastName; }
-        public bool GetHightName(Student a)
+        public bool GetHightName(Student_24 a)
         {
             string str1 = lastName + firstName + patrName;
             string str2 = a.lastName + a.firstName + a.patrName;
@@ -41,13 +41,13 @@ namespace _04._03
             }
             return false;
         }
-        public bool GetHightMark(Student a)
+        public bool GetHightMark(Student_24 a)
         {
             if (mark > a.mark)
                 return true;
             return false;
         }
-        public bool GetHightGroup(Student a)
+        public bool GetHightGroup(Student_24 a)
         {
             for (int i = 0; i < (group.Length > a.group.Length ? a.group.Length : group.Length); i++)
             {
@@ -61,8 +61,8 @@ namespace _04._03
     }
     class Junction
     {
-        public Student Data;
-        public Junction(Student data)
+        public Student_24 Data;
+        public Junction(Student_24 data)
         {
             Data = data;
         }
@@ -79,7 +79,7 @@ namespace _04._03
 
         public int getLenght() { return count; }
 
-        public void Add(Student data)
+        public void Add(Student_24 data)
         {
             Junction junction = new Junction(data);
 
@@ -93,7 +93,7 @@ namespace _04._03
             count++;
         }
 
-        public void Remove(Student data)
+        public void Remove(Student_24 data)
         {
             var current = head;
             Junction previous = null;
@@ -152,7 +152,7 @@ namespace _04._03
                 {
                     string[] line = s.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
 
-                    this.Add(new Student(line[0], line[1], line[2], line[3], Convert.ToDouble(line[4])));
+                    this.Add(new Student_24(line[0], line[1], line[2], line[3], Convert.ToDouble(line[4])));
                 }
             }
 
@@ -320,7 +320,7 @@ namespace _04._03
                 }
             }
         }
-        public Student Search()
+        public Student_24 Search()
         {
             Console.WriteLine("Введите фамилию студента");
             string lastName = Console.ReadLine();
@@ -334,11 +334,11 @@ namespace _04._03
                 }
                 current = current.Next;
             }
-            return new Student();
+            return new Student_24();
         }
         public void AddStudent()
         {
-            Student newStudent = new Student();
+            Student_24 newStudent = new Student_24();
             Console.WriteLine("Введите данные о студенте");
             Console.Write("Фамилия - ");
             newStudent.lastName = Console.ReadLine();

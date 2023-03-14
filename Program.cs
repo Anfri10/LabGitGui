@@ -10,11 +10,13 @@ namespace _04._03
 {
     class Student_24
     {
+
         //данные о студентах
         private string lastName { get; set; }
         private string firstName { get; set; }
         private string patrName { get; set; }
         private string group { get; set; }
+
 
         public Student_24() { }
         public Student_24(string lastName_p, string firstName_p, string patrName_p, string group_p, double mark_p)

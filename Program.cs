@@ -10,11 +10,11 @@ namespace _04._03
 {
     class Student
     {
-        public string lastName;
-        public string firstName;
-        public string patrName;
-        public string group;
-        public double mark;
+        private string lastName { get; set; }
+        private string firstName { get; set; }
+        private string patrName { get; set; }
+        private string group { get; set; }
+        private double mark { get; set; }
 
         public Student() { }
         public Student(string lastName_p, string firstName_p, string patrName_p, string group_p, double mark_p)
